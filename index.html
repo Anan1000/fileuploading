@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Local PDF Viewer</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #f0f0f0;
+        }
+        #pdf-viewer {
+            width: 90%;
+            height: 90vh;
+            border: none;
+        }
+    </style>
+</head>
+<body>
+    <iframe id="pdf-viewer" src="chart.pdf" type="application/pdf"></iframe>
+
+    <script>
+        // Optional: Add error handling
+        document.getElementById('pdf-viewer').addEventListener('error', function() {
+            alert('Unable to load PDF. Please ensure the PDF file exists in the same directory.');
+        });
+    </script>
+</body>
+</html>
